@@ -1,0 +1,15 @@
+<div class="modal-header">
+    <h3 class="modal-title">Create List</h3>
+    <span class="close" ng-click="md.closeModal()">&times;</span>
+</div>
+
+<div class="modal-body">
+    <form novalidate name="modalform" ng-submit="md.createList()">
+        <div class="form-group">
+          <input ng-model="modal.title">{{modal.title}}</input>
+        </div>
+        <div class="btn-wrap text-center">
+            <input id="md-btn" ng-disabled="modalform.$invalid" type="submit" value="Create List" class="btn btn-md btn-info"/>
+        </div>
+    </form>
+</div>

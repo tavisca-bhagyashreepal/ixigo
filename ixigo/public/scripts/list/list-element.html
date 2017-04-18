@@ -1,0 +1,31 @@
+<div class="cards" ng-if="listElement.item">
+    <div class="card-header">
+      <div class="card-align" ng-if="listElement.$localStorage.lists.length>1">
+        <span>Move to-</span>
+        <select ng-model="listElement.selectedItem" ng-change="listElement.moveCard()" style="width:100px;">
+          <!-- <option value="">--- Select an option ---</option> -->
+          <option ng-repeat="item in listElement.$localStorage.lists" ng-selected="{{listElement.selectedItem == item.id}}" value="{{item.id}}" ng-if="item.id!=listElement.listId">{{item.title}}</option>
+        </select>
+      </div>
+      <div style="margin-left: 140px;">
+        <button ng-click="listElement.editCard()" style="width:70px">{{listElement.isEditable==true ?'Done':'Edit'}}</button>
+        <button ng-click="listElement.deleteCard()" style="width:70px">Delete</button>
+      </div>
+    </div>
+    <div class="card-element">
+      <span>Title:</span>
+      <input ng-model="listElement.item.title" ng-class="listElement.isEditable?'enabled':'element-disabled'"></input>
+    </div>
+    <div class="card-element">
+      <span>Description:</span>
+      <input class="txt" ng-model="listElement.item.description" ng-class="listElement.isEditable?'enabled':'element-disabled'"></input>
+    </div>
+    <div class="card-element">
+      <span>Username:</span>
+      <input class="txt" ng-model="listElement.item.username" ng-class="listElement.isEditable?'enabled':'element-disabled'"></input>
+    </div>
+    <div class="card-element">
+      <span>Status: </span>
+      <input class="txt" ng-model="listElement.item.status" ng-class="listElement.isEditable?'enabled':'element-disabled'"></input>
+    </div>
+</div>

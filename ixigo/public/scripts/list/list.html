@@ -1,0 +1,38 @@
+<div class="lists">
+    <div class="card-header" style="margin-bottom:7px;">
+      <button style="float:right;" ng-click="list.deleteList()">Delete</button>
+    </div>
+    <input ng-class="list.isEditable?'enabled':'disabled'" ng-model="list.item.title" ng-focus="list.isEditable=true" ng-blur="list.isEditable=false" style="margin:auto;width:315px;"></input>
+    <ul>
+      <li ng-repeat="element in list.item.cards">
+        <list-element-component item="element" list-id="list.item.id"></list-element-component>
+      </li>
+      <li>
+        <div class="cards">
+          <button ng-click="list.clickAddCard()" ng-show="!list.showTitleInput">Add Card</button>
+          <div  ng-show="list.showTitleInput">
+          <div class="card-element">
+            <span>Title:</span>
+            <input ng-model="list.card[list.id].title"></input>
+          </div>
+          <div class="card-element">
+            <span>Description:</span>
+            <input class="txt" ng-model="list.card[list.id].description"></input>
+          </div>
+          <div class="card-element">
+            <span>Username:</span>
+            <input class="txt" ng-model="list.card[list.id].username"></input>
+          </div>
+          <div class="card-element">
+            <span>Status: </span>
+            <input class="txt" ng-model="list.card[list.id].status"></input>
+          </div>
+          <div style="margin-top:5px; margin-left:148px;">
+            <button ng-click="list.AddCard()" style="width:70px;">Add</button>
+            <button ng-click="list.cancelCard()" style="width: 70px; margin-left: 3px;">Cancel</button>
+          </div>
+        </div>
+        </div>
+      </li>
+  </ul>
+</div>

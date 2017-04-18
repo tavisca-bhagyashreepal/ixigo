@@ -1,0 +1,75 @@
+div.container{
+  width:100%;
+  height:100%;
+  padding:0px;
+  margin:0px;
+  position:absolute;
+}
+
+header, footer{
+  padding:1em;
+  color:white;
+  background-color: black;
+  clear:left;
+  text-align:center;
+  height:114px;
+}
+
+.content{
+  display:flex;
+}
+
+.lists{
+  display:flex;
+  flex-direction:column;
+  border: 1px solid gray;
+  padding:15px;
+  width:350px;
+  margin:10px;
+}
+
+.lists ul{
+    list-style:none;
+    margin-left:0px;
+    padding-left:0px;
+  }
+
+.lists li{
+  margin:5px;
+  padding:5px;
+  border: 1px solid black;
+  margin-bottom:15px;
+}
+
+.card-header{
+  background-color:gray;
+  margin:2px;
+  padding:2px;
+}
+.card-element{
+  display:flex;
+  margin-top:15px
+}
+
+.card-element span{
+  float:left;
+  width:50%;
+}
+.card-element input{
+  float:right;
+  width:50%;
+}
+.card-align{
+  //margin-left:50px;
+  color:white;
+  float:right;
+  margin-right:3px;
+}
+.add-list{
+  width:80px;
+  height:25px;
+}
+
+.add{
+  margin-top:10px;
+}

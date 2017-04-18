@@ -1,0 +1,23 @@
+<div class="container">
+  <header>
+    <h1>You have {{home.lists.length}} lists.</h1>
+    <button class="add-list" ng-click="home.showTitleInput= !home.showTitleInput" ng-show="!home.showTitleInput">Add List</button>
+  </header>
+  <div  class="content">
+    <list-component item="item" ng-repeat="item in home.lists"></list-component>
+    <div ng-show="home.showTitleInput" class="lists">
+      <span>Enter list title:</span><input ng-model="home.list[home.id].title"></input>
+      <button ng-click="home.AddList()" class="add">Add</button>
+      <button ng-click="home.cancelList()" class="add">Cancel</button>
+    </div>
+    <!-- <button ng-click="home.deleteList(item)">Delete List</button> -->
+  </div>
+
+  <!-- <li class="list-items">
+    <button ng-click="home.showTitleInput=! home.showTitleInput">Add List</button>
+    <div ng-show="home.showTitleInput">
+      <span>Enter list title:</span><input ng-model="home.title"></input>
+      <button ng-click="home.AddList()">Add</button>
+    </div>
+  </li> -->
+</div>
