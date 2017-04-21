@@ -4,7 +4,7 @@
         <span>Move to-</span>
         <select ng-model="listElement.selectedItem" ng-change="listElement.moveCard()" style="width:100px;">
           <!-- <option value="">--- Select an option ---</option> -->
-          <option ng-repeat="item in listElement.$localStorage.lists" ng-selected="{{listElement.selectedItem == item.id}}" value="{{item.id}}" ng-if="item.id!=listElement.listId">{{item.title}}</option>
+          <option ng-repeat="item in listElement.$localStorage.lists" value="{{item.id}}" ng-if="item.id!=listElement.listId">{{item.title}}</option>
         </select>
       </div>
       <div style="margin-left: 140px;">

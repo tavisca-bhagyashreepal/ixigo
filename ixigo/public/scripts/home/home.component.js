@@ -16,7 +16,7 @@ class HomeCtrl {
       this.showTitleInput = false;
       this.list =[];
       this.id=0;
-      this.list[0]={
+      this.list[this.id]={
         title: '',
         id: this.id,
         cards:[]
@@ -57,6 +57,7 @@ class HomeCtrl {
       //     }
       // });
       this.list[this.id].id = this.id+1;
+      this.list[this.id].cards=[];
       this.lists.push(this.list[this.id++]);
       this.$localStorage.lists = this.lists;
       this.showTitleInput =false;
